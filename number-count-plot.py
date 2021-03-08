@@ -22,7 +22,7 @@ from scipy.optimize import curve_fit
 # =============================================================================
 
 # Read in data from catalogue text file
-id_no,x,y,flux,flux_error,bkg,bkg_error,m,err_m = np.loadtxt('catalogue_full_error_3465_3_9.txt', delimiter="\t", unpack=True)
+id_no,x,y,flux,flux_error,bkg,bkg_error,m,err_m = np.loadtxt('catalog-var-3485-3-3-6.txt', delimiter="\t", unpack=True)
 
 # Calculate N(m) for each value of m
 N_m = []
