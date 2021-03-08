@@ -451,39 +451,5 @@ def find_radius(data,y,x,min_brightness):
             
     return radius
     
-    
-
-#%%
-# TEST ANNULUS AND APERTURE
-
-data = load_data('mosaic.fits')
-
-plt.imshow(data,interpolation='nearest',origin='lower')
-plt.title('Unclean data from function',y=1.02)
-plt.xlabel('x')
-plt.ylabel('y')
-#plt.savefig('aperture-annulus.png',bbox_inches='tight')
-
-#%%
-
-data = load_clean_data('mosaic.fits')
-plt.imshow(data,interpolation='nearest',origin='lower')
-plt.title('Clean data',y=1.02)
-plt.xlabel('x')
-plt.ylabel('y')
-
-small_patch=data[400:500,850:950]
-
-#%%
-
-plt.imshow(small_patch, interpolation='nearest',origin='lower')
-plt.colorbar()
-
-#%%
-
-r = find_radius(small_patch,37,33,3485)
-print(r)
-
-print(annulus_background(small_patch,37,33,r+3,r+8))
 
 
