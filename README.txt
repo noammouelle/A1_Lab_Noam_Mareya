@@ -9,7 +9,7 @@ Both versions analyse the image contained in "mosaic.fits".
 This folder contains two working versions of our code to obtain a galaxy number
 count.
 
-The version 1 is composed of 3 files:
+The version 1 (variable aperture shape) is composed of 3 files:
     1. "A1_tools.py", which is a package containing all the routines needed to 
     analyse the image.
     
@@ -25,9 +25,16 @@ The version 1 is composed of 3 files:
     4. "run1_calibrated_stats.txt", which contains data already collected to
     avoid having to fully run the programs.
     
-The version 2 is composed of FILL HERE files:
-    1. ...
-    2. ...
+The version 2 (circular aperture) is composed of 3 files:
+    1. "aperture_tools.py", which contains various functions required for 
+    circular aperture photometry.
+    
+    2. "variable_aperture.py", which contains the function to run variable
+    circular radius aperture photometry. It tests the function on a couple
+    small patches and plots these for easy viewing.
+    
+    3. "number-count-plot.py" contains the analysis needed to produce a 
+    number count plot.
     
 2. INSTRUCTIONS ###############################################################
 
@@ -37,7 +44,11 @@ For version 1:
     b. Files were divided in Spyder cells which run one after the other.
     
 For version 2:
-    a. ...
-    b. ...
+    a. First execute "aperture_tools.py". This is split up into cells
+    as well which can be run one after the other.
+    b. To test out the algorithm, run cells one after the other in the 
+    "variable_aperture.py" file.
+    c. A number count plot can be produced from the pre-set catalogue data
+    "catalogue_final_3465_3_9.txt", which is also in this GitHub repo.
     
     
